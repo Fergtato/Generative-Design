@@ -18,4 +18,4 @@ if (key == 's' || key == 'S') saveCanvas(gd.timestamp(), 'png');
 
 ![Example](examples/181018_162731_182.png?raw=true "Example 1")
 ![Example](examples/181018_162804_726.png?raw=true "Example 2")
-![Example](examples/181018_162809_159.png?raw=true "Example 2")
+![Example](examples/181018_162809_159.png?raw=true "Example 3")
