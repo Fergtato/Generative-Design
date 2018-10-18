@@ -1,4 +1,4 @@
-# P.1.1 - Hello, Color
+# P.1.1 - Hello, Color - Step 1
 
 ## The Code
 
