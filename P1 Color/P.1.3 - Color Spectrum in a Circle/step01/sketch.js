@@ -1,16 +1,21 @@
-//the setup function runs before the draw function and does not loop. This is used to create or setup anything needed before the draw loop runs e.g. Canvas, Canvas Size, Color Mode.
+//define how many segments the triangle fan will be broken into
+var segmentCount = 360;
+//define the radius of the triangle fan
+var radius = 300;
+
 function setup() {
-    //initialise the canvas and give it its size in width and height
-    createCanvas(720, 720);
+    createCanvas(800, 800);
+    // noStroke();
 }
 
-//the draw function loops and can draw elements to the canvas
 function draw() {
-    //set the colour of the background
-    background(255,255,255);
-
-    //set the fill colour of the rectangle
-    fill(0);
-    //create a rectangle with (x position, y position, width, height)
-    rect(0,0,100,100);
+    //create a simple triangle fan using hard coded vertex points. The first vertex is the centre point with the rest being the points on the outside. The last first needs to be the same as the first outside point to complete the shape.
+    beginShape(TRIANGLE_FAN);
+    vertex(57.5, 50); //centre point
+    vertex(57.5, 15); //top
+    vertex(92, 50); //right
+    vertex(57.5, 85); //bottom
+    vertex(22, 50); //left
+    vertex(57.5, 15); //top
+    endShape();
 }

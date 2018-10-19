@@ -1,39 +1,28 @@
-# P.1.1 - Hello, Color - Step 1
+# P.1.3 - Color Spectrum in a Circle - Step 1
 
 ## The Code
 
-The setup function runs before the draw function and does not loop. This is used to create or setup anything needed before the draw loop runs e.g. Canvas, Canvas Size, Color Mode.
+Define how many segments the triangle fan will be broken into.
 
 ```js
-function setup() {}
+var segmentCount = 360;
 ```
 
-Initialise the canvas and give it its size in width and height.
+Define the radius of the triangle fan.
 
 ```js
-createCanvas(720, 720);
+var radius = 300;
 ```
 
-The draw function loops and can draw elements to the canvas.
+Create a simple triangle fan using hard coded vertex points. The first vertex is the centre point with the rest being the points on the outside. The last first needs to be the same as the first outside point to complete the shape.
 
 ```js
-function draw() {}
-```
-
-Set the colour of the background.
-
-```js
-background(255,255,255);
-```
-
-Set the fill colour of the rectangle. For now we'll just set it to black.
-
-```js
-fill(0);
-```
-
-Create a rectangle with the structure: (x position, y position, width, height)
-
-```js
-rect(0,0,100,100);
+beginShape(TRIANGLE_FAN);
+vertex(57.5, 50); //centre point
+vertex(57.5, 15); //top
+vertex(92, 50); //right
+vertex(57.5, 85); //bottom
+vertex(22, 50); //left
+vertex(57.5, 15); //top
+endShape();
 ```
