@@ -1,39 +1,27 @@
-# P.1.1 - Hello, Color - Step 1
+# P.1.5 - Color Palettes From Images - Step 1
 
 ## The Code
 
-The setup function runs before the draw function and does not loop. This is used to create or setup anything needed before the draw loop runs e.g. Canvas, Canvas Size, Color Mode.
+Load an image from the given path and create a p5.Image from it.
 
 ```js
-function setup() {}
+img = loadImage('data/pic1.jpg');
 ```
 
-Initialise the canvas and give it its size in width and height.
+Stop loop effect of the draw function.
 
 ```js
-createCanvas(720, 720);
+noLoop();
 ```
 
-The draw function loops and can draw elements to the canvas.
+Load pixel data from the image into the [pixels] attribute.
 
 ```js
-function draw() {}
+img.loadPixels();
 ```
 
-Set the colour of the background.
+Return the first value of the first pixel.
 
 ```js
-background(255,255,255);
-```
-
-Set the fill colour of the rectangle. For now we'll just set it to black.
-
-```js
-fill(0);
-```
-
-Create a rectangle with the structure: (x position, y position, width, height)
-
-```js
-rect(0,0,100,100);
+console.log(img.pixels[0]);
 ```
